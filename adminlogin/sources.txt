@@ -1,0 +1,1 @@
+https://godjango.com/13-django-social-auth-101/
