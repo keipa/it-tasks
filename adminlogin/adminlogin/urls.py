@@ -20,7 +20,10 @@ import userlist.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', userlist.views.choose_register),
-    url(r'^vk$', userlist.views.choose_register),
+    url(r'^login/vk$', userlist.views.vk),
     url(r'^twitter$', userlist.views.choose_register),
     url(r'^facebook$', userlist.views.choose_register),
+    url(r'^login/facebook', userlist.views.facebook)
+
+# ?code=(?P<code>\.*)'
 ]

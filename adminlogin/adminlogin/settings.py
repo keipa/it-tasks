@@ -37,8 +37,24 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'userlist'
+    'userlist',
 ]
+
+# SOCIAL_AUTH_ENABLED_BACKENDS =('facebook',)
+
+# TEMPLATES =(
+#     'django.contrib.auth.context_processors.auth',
+#     'social_auth.context_processors.social_auth_by_type_backends'
+#
+# )
+#
+# LOGIN_URL = '/login/'
+# LOGIN_REDIRECT_URL = '/private/'
+# LOGIN_ERROR_URL = '/login-error/'
+
+# SOCIAL_AUTH_DEFAULT_USERNAME = "new_social_auth_user"
+
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

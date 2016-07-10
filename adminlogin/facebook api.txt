@@ -1,0 +1,27 @@
+
+input
+https://www.facebook.com/dialog/oauth?client_id=1744462099145501&redirect_uri=http://127.0.0.1:8000/userlist&display=popup
+
+output
+http://127.0.0.1:8000/userlist?code=AQDacDYddbV5hvbuKp_Vh5G1VRkJyRguRs5X19ZfxTdbbVmJDIyypBVzwiDeEiDCJi8RkWQGWsLsjWHDxQlUclum_wgPqK3LTsOE6d-OOZ0hk56nkf_OeqFYgU5gZLaxxbb0LV6pKELMKS9D2wDasB59iFdUPcrAUn0Hm6hhJ1BdgCMI4V_9BmpqUgtJnQM0HRxIZu6HWya_l-sdodsBYZmFG7WFVP2sEzo458sCyW0ByjwQSnrSPb-jQgrxYnldCpg0AcqY5I9z-SVtVYHbYCC7WUGpToh61FM__sjZD9DiPblLsFi7nGz3OBqlaPdrYe2IruPbPqQjD5fm7Ztq4krf#_=_
+
+
+
+input
+https://graph.facebook.com/v2.3/oauth/access_token?%20client_id=1744462099145501&redirect_uri=http://127.0.0.1:8000/userlist&client_secret=9235ba83ad20880d69ca8fa2602dce3b&code=AQD2vH0wvWGThMuoF1X25Op3pmMz0Y835JV7iuG9mpZVeQeCfn29XkVpchS4rhVoiyO9Wf_K0QzyIiLzm1gdstZKAhQhp77kP0IBykPKLc2bpBDx9hXYAYwBAkJGDS39wEVxVqIcvdHSIuba2fScLh_5WhZPVij-3du1mn-d97nRucNHmUCvgM8afAYtGRUts2sfkm0OfkM0zU5FTR7u9HYWGUSc8ZPOIsNmuawCN3UKHbMXaNS-jqqdRvrs8MpJIZLfEbJMUa3tO1SxsJnpC_Hne1bYI1W8JM-HKkkuaPYJ7XRAFxsGb8XHTw9qRI2fMXo2TX8qpW7yc38-FxT8gbEP#_=_
+
+output
+{"access_token":"EAAYylDuZBYx0BAB9MejQW9xtBHzavGLnx8qiMVnkuPgQ37maFcsrAwRjrNUOdOH1pzwX0nIfGAFqs1QzpiqP3Je80SVuZAeWiZB7t1qFxk1JPbZCGMAyDoEDosDqehQKWbZBmYyWOjuw3N4EkGr8G03ZCZCArpCCCEZD","token_type":"bearer","expires_in":5180924}
+
+
+
+
+
+input
+https://graph.facebook.com/v2.6/me?fields=id%2Cname&access_token=EAAYylDuZBYx0BAB9MejQW9xtBHzavGLnx8qiMVnkuPgQ37maFcsrAwRjrNUOdOH1pzwX0nIfGAFqs1QzpiqP3Je80SVuZAeWiZB7t1qFxk1JPbZCGMAyDoEDosDqehQKWbZBmYyWOjuw3N4EkGr8G03ZCZCArpCCCEZD
+
+output
+{
+   "id": "1373243329368966",
+   "name": "Nikolai Rovdo"
+}

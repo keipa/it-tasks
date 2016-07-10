@@ -1,0 +1,17 @@
+
+input
+https://oauth.vk.com/authorize?client_id=5542391&display=page&redirect_uri=http://127.0.0.1:8000/login/vk&scope=friends&response_type=code&v=5.52
+output
+http://127.0.0.1:8000/?code=3c4ab0d84a22d93651
+
+
+input
+https://oauth.vk.com/access_token?client_id=5542391&client_secret=oTvgZAqdQK0G8Pwouc8q&redirect_uri=http://127.0.0.1:8000/&code=3c4ab0d84a22d93651
+output
+{"access_token":"367d59db04be4ef98e148cc5469dec49601524341411ecf01005f58878238cfcd41c0e5922a6a7979d2a3","expires_in":86263,"user_id":51944244}
+
+
+input
+https://api.vk.com/method/users.get?access_token=367d59db04be4ef98e148cc5469dec49601524341411ecf01005f58878238cfcd41c0e5922a6a7979d2a3&v=V 
+output
+{"response":[{"uid":51944244,"first_name":"Николай","last_name":"Ровдо"}]}
