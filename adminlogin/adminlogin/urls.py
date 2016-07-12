@@ -21,9 +21,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', userlist.views.choose_register),
     url(r'^login/vk$', userlist.views.vk),
-    url(r'^twitter$', userlist.views.choose_register),
+    url(r'^login/twitter$', userlist.views.twitter),
     url(r'^facebook$', userlist.views.choose_register),
-    url(r'^login/facebook', userlist.views.facebook)
+    url(r'^login/facebook', userlist.views.facebook),
+    url(r'^login/twitter/code', userlist.views.twitter_code)
 
 # ?code=(?P<code>\.*)'
 ]

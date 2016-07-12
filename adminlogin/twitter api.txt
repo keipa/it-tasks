@@ -1,0 +1,11 @@
+import twitter
+
+t = Twitter(
+    auth=OAuth("363826185-cnX0u7Jtul20PuAriC2rapFygzwEykM7O6yaIg8W", "xYRAAcUiJxMoDXhE8JJTRkuPxHurCEpRbR3lKHdqFL8Rc",
+               "k3HSbkazpchiMmUECuTD1TAyq", "X1ZoEdGGTnVYVZYv23IbeUB5xnXPnIxP1ouw1W2oyF7oHvuwOw")
+)
+
+t.statuses.home_timeline(count=1)
+
+752466669193334784
+752467746533679104

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+        <input type="text" id="search" placeholder="Enter code here.." onkeypress="return search(event)"><br>
+
+{{oauth_token}}<br>
+{{oauth_token_secret}}
+
+    <script>
+		function search(e) {
+            if (e.keyCode == 13) {
+                window.location = "http://127.0.0.1:8000/login/twitter/code/?code=" + encodeURIComponent(e.target.value)+"&oauth_token="+"{{oauth_token}}"+"&oauth_token_secret="+"{{oauth_token_secret}}";
+            }
+        }
+
+</script>
+
+</body>
+</html>

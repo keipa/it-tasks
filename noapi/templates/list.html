@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>userlist</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+<b class="hi">Your ID, {{ whoami }}</b>
+
+
+
+{% block content %}
+    	{% for user in users %}
+            <li>
+            <div class="user">
+            	<div class ="name">User :{{ user.user }}</div>
+                <div class ="provider">Social Network: {{ user.provider }}</div>
+                <div class ="uid">SocID: {{ user.uid }}</div>
+                <a style="color: red" href="http://127.0.0.1:8000/delete/user?uid={{ user.user }}&whoami={{ whoami }}"> DELETE </a>
+                <a href="http://127.0.0.1:8000/ban/user?whoami={{ user.user }}"> BAN </a>
+                <a href="http://127.0.0.1:8000/unban/user?whoami={{ user.user }}"> UNBAN </a>
+        	</div>
+
+            </li>
+        {% endfor %}
+{% endblock %}
+</body>
+</html>
