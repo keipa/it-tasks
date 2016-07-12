@@ -2,6 +2,10 @@ App.Camera, App;md5f22d74140d7efc8f033f3e312f703c5e.Camera
 App.Camera, App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f22d74140d7efc8f033f3e312f703c5e.Camera
 App.Camera;md5f22d74140d7efc8f033f3e312f703c5e.Camera
 app.Camera;md5f22d74140d7efc8f033f3e312f703c5e.Camera
+App.PlaceItem, App;md5f22d74140d7efc8f033f3e312f703c5e.PlaceItem
+App.PlaceItem, App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f22d74140d7efc8f033f3e312f703c5e.PlaceItem
+App.PlaceItem;md5f22d74140d7efc8f033f3e312f703c5e.PlaceItem
+app.PlaceItem;md5f22d74140d7efc8f033f3e312f703c5e.PlaceItem
 App.MainActivity, App;md5f22d74140d7efc8f033f3e312f703c5e.MainActivity
 App.MainActivity, App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f22d74140d7efc8f033f3e312f703c5e.MainActivity
 App.MainActivity;md5f22d74140d7efc8f033f3e312f703c5e.MainActivity

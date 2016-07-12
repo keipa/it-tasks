@@ -73,5 +73,6 @@ D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.R
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\layout\places.xml
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\App.dll.mdb
 D:\LABS\itransition-tasks\android_test\App\App\bin\Debug\App.dll.mdb
