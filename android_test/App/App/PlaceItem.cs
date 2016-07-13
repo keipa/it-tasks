@@ -28,27 +28,34 @@ namespace App
             var view = inflater.Inflate(Resource.Layout.places, container, false);
             LinearLayout layout = (LinearLayout)view.FindViewById(Resource.Id.place);
             DirectoryInfo d = new DirectoryInfo(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath);
-            FileInfo[] f = d.GetFiles("*.png");
+            FileInfo[] f = d.GetFiles();
             foreach (var file in f)
             {
-                TextView t = new TextView(this.Activity);
-                t.Text = file.Name.Replace(".png", "");
-                t.Click += (sender, e) =>
+                if (file.Name == ".png")
                 {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this.Activity);
+                    continue;
+                }
+                if (file.Name.Contains(".png"))
+                {
                     ImageView image = new ImageView(this.Activity);
-                    Bitmap instanceImage = Bitmaping.LoadAndResizeBitmap(file.Name, 250, 250);
-
-                    
+                    Bitmap instanceImage = Bitmaping.LoadAndResizeBitmap(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath+"/"+file.Name, 250, 250);
                     image.SetImageBitmap(instanceImage);
-                    builder.SetView(image);
-                    builder.SetPositiveButton("ok", (senderalert, args) =>
+                    image.Click += (sender, e) =>
                     {
-                        
-                    });
-                    builder.Show();
-                };
-                layout.AddView(t);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(this.Activity);
+
+                        TextView w = new TextView(this.Activity);
+                        w.Text = file.Name.Replace(".png", "");
+                    //image.SetImageBitmap(instanceImage);
+                    builder.SetView(w);
+                        builder.SetPositiveButton("ok", (senderalert, args) =>
+                        {
+
+                        });
+                        builder.Show();
+                    };
+                    layout.AddView(image);
+                }
 
             }
 

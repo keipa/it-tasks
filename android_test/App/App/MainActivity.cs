@@ -21,8 +21,8 @@ namespace App
             SetContentView(Resource.Layout.Main);
             this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             Addtab("Camera", new Camera());
-            Addtab("Meter", new PlaceItem());
-
+            Addtab("Places", new PlaceItem());
+            Addtab("Meter", new MeterSpirt());
 
             Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
            

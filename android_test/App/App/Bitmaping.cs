@@ -10,6 +10,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using System.IO;
+
+
+using Android.Graphics.Drawables;
+
 
 namespace App
 {

@@ -28,21 +28,29 @@ namespace App
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
 
-
+            int a = 0;
             _textureView = new TextureView(Application.Context);
             _textureView.SurfaceTextureListener = this;
             _textureView.Click += (sender, e) =>
             {
+                var bitmap = _textureView.GetBitmap(500, 500);
+                var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
 
+                var filePath = System.IO.Path.Combine(sdCardPath, a.ToString() + ".png");
+                var stream = new FileStream(filePath, FileMode.Create);
+                bitmap.Compress(Bitmap.CompressFormat.Png, 75, stream);
+                stream.Close();
+                a++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(this.Activity);
                 EditText input = new EditText(this.Activity);
                 builder.SetView(input);
                 builder.SetPositiveButton("ok", (senderalert, args) =>
                 {
-                    var bitmap = _textureView.GetBitmap(500, 500);
-                    var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
-                    var filePath = System.IO.Path.Combine(sdCardPath, input.Text+ ".png");
-                    var stream = new FileStream(filePath, FileMode.Create);
+                    bitmap = _textureView.GetBitmap(500, 500);
+                    sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+                    
+                    filePath = System.IO.Path.Combine(sdCardPath, input.Text+ ".png");
+                    stream = new FileStream(filePath, FileMode.Create);
                     bitmap.Compress(Bitmap.CompressFormat.Png, 75, stream);
                     stream.Close();
                 });
