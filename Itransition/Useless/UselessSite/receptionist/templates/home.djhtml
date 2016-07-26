@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	    <title>{% block title %} Useless Authentication Site {% endblock %}</title>
+	    <link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+	    <link href="/static/css/bootstrap-theme.min.css" rel="stylesheet"/>
+	    <link href="/static/css/fbposter.css" rel="stylesheet"/>
+	    <script src="/static/js/jquery-3.0.0.min.js"></script>
+	    <script src="/static/js/bootstrap.min.js"></script>
+	    <script type='text/javascript'>
+	     $(document).ready(function() {
+	         var table = $('#example').DataTable();
+	         $('#example tbody').on( 'click', 'tr', function () {
+	             $(this).toggleClass('selected');
+	         });
+
+	         $('#button').click( function () {
+	             alert( table.rows('.selected').data().length +' row(s) selected' );
+	         });
+	     });
+	    </script>
+    </head>
+    <body>
+	    <div>
+	        <h1>Useless authentication</h1>
+	        <p>
+		        <ul>
+		  {% if user and not user.is_anonymous %}
+		      <li>
+			      <a>Hello {{ user.get_full_name|default:user.username }}!</a>
+		      </li>
+		      <li>
+			      <a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
+		      </li>
+		      <li>
+			      <table id="example" class="kek" width="100%" cellspacing="0">
+			          <thead>
+				          <tr>
+				              <th> Social network </th>
+				              <th> Username </th>
+				              <th> User id </th>
+				              <th> Ban status </th>
+				              <th>  </th>
+				          </tr>
+			          </thead>
+			          <tbody>
+				          <tr>
+				              <td>Tiger Nixon</td>
+				              <td>System Architect</td>
+				              <td>Edinburgh</td>
+				              <td>61</td>
+				              <td>2011/04/25</td>
+				          </tr>
+				          <tr>
+				              <td>Garrett Winters</td>
+				              <td>Accountant</td>
+				              <td>Tokyo</td>
+				              <td>63</td>
+				              <td>2011/07/25</td>
+				          </tr>
+			          </tbody>
+			      </table>
+		      </li>
+		  {% else %}
+		      <li>
+			      <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
+		      </li>
+		      <li>
+			      <a href="{% url 'social:begin' 'vk-oauth2' %}?next={{ request.path }}">Login with Vk</a>
+		      </li>
+		      <li>
+			      <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>
+		      </li>
+		  {% endif %}
+		        </ul>
+	        </p>
+	    </div>
+    </body>
+</html>

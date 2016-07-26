@@ -23,13 +23,3 @@ textarea {
     max-width: 280px;
 }
 
-
-.dz-default.dz-message {
-        background: gray;
-        border: black dashed 3px;
-        padding: 50px;
-        width: 1000px;
-        margin:auto;
-        text-align: center;
-        color: white;
-    }

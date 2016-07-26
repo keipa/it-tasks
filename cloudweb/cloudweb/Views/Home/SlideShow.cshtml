@@ -1,0 +1,32 @@
+﻿
+@model cloudweb.Models.SlideShowViewModel
+
+@{
+    ViewBag.Title = "Slide Show";
+    //Layout = "~/Views/Shared/_LayoutSlide.cshtml";
+}
+@if (Model.photos.Count() > 0)
+{
+    <ul class="bxslider">
+        @foreach (var item in Model.photos)
+        {
+            <li><img src="http://res.cloudinary.com/@item.path" /></li>
+        }
+    </ul>
+}
+else
+{
+    <h3>Вы не выбрали ни одной фотографии.<a href="@Url.Action("CreateSlideShow", "Home", new { user_id = (string)Session["CurrentUserId"]})">Создайте НОРМАЛЬНОЕ слайдшоу.</a></h3>
+}
+@section scripts{
+    <script type="text/javascript">
+        $('.bxslider').bxSlider({
+            mode: '@Model.Effect',
+            auto: 'true',
+            speed: @Model.Duration * 500,
+            captions: true
+        });
+    </script>
+}
+
+

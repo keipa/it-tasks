@@ -36,10 +36,15 @@ namespace App
             SeekBar volumeness = (SeekBar)view.FindViewById(Resource.Id.seekBarVolume);
             TextView volumetext = (TextView)view.FindViewById(Resource.Id.textVolume);
             Button drink = (Button)view.FindViewById(Resource.Id.drinkbutton);
+            Button clearb = (Button)view.FindViewById(Resource.Id.clearbutton);
             ProgressBar drinkprogress = (ProgressBar)view.FindViewById(Resource.Id.progressBar1);
+            clearb.Click += (sender, e) =>
+            {
+                drinkprogress.Progress = 0;
+            };
             strongness.ProgressChanged += (sender, e) =>
             {
-                strongtext.Text = strongness.Progress.ToString()+"degrees";
+                strongtext.Text = strongness.Progress.ToString()+"*";
             };
             volumeness.ProgressChanged += (sender, e) =>
             {
@@ -48,7 +53,7 @@ namespace App
 
             drink.Click += (sender, e) =>
             {
-                cur += volumeness.Progress * 20 * strongness.Progress / 200;
+                cur = volumeness.Progress * strongness.Progress / 10;
                 drinkprogress.Progress += Convert.ToInt32(cur);
                 if (cur > norm||drinkprogress.Progress>99)
                 {

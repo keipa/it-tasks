@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SlideShow">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SlideName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PhotoIds" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Effect" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Duration" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userid" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="SlideShow" EntityType="Self.SlideShow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

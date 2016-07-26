@@ -1,0 +1,180 @@
+<!--<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/meterlayout">
+  <RelativeLayout
+      android:id="@+id/SeekLayout"
+      android:paddingTop="15dp"
+      android:gravity="center_horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="110dp">
+    <TextView
+        android:id="@+id/StrongText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="Strenght: "
+        android:textStyle="bold"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/TextStrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_below="@id/StrongText" />
+    <SeekBar
+        android:layout_height="47.0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/SeekBarStrong"
+        android:layout_below="@id/TextStrong" />
+  </RelativeLayout>
+
+  <ListView
+  android:id="@+android:id/AlcoList"
+  android:paddingTop="15dp"
+  android:layout_below="@id/SeekLayout"
+  android:layout_height="370dp"
+  android:layout_width="match_parent">
+ 
+  </ListView>
+
+  <TableLayout
+      android:id="@+id/AlkoTable"
+>
+    <TableRow
+        android:gravity="center_horizontal">
+      <ImageButton
+          android:id="@+id/BeerButton"
+          android:src="@drawable/beerglass"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/BaconButton"
+          android:src="@drawable/baconcocktail"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/BeerBottleButton"
+          android:src="@drawable/beerbottle"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/BeerCanButton"
+          android:src="@drawable/beercan"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+    </TableRow>
+    <TableRow
+        android:gravity="center_horizontal">
+      <ImageButton
+          android:id="@+id/BeerKekButton"
+          android:src="@drawable/beerkek"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/BloodButton"
+          android:src="@drawable/bloodmary"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/DrinkButton"
+          android:src="@drawable/drink"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/FruitButton"
+          android:src="@drawable/fruit"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+    </TableRow>
+    <TableRow
+        android:gravity="center_horizontal">
+      <ImageButton
+          android:id="@+id/GlassButton"
+          android:src="@drawable/glass"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/KonjakButton"
+          android:src="@drawable/konjakglass"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/PintButton"
+          android:src="@drawable/pint"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/ShampoonBottleButton"
+          android:src="@drawable/shampoonbottle"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+    </TableRow>
+    <TableRow
+        android:gravity="center_horizontal">
+      <ImageButton
+          android:id="@+id/ShampoonGlassButton"
+          android:src="@drawable/shampoonglass"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/WineBottleButton"
+          android:src="@drawable/winebottle"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/WineGlassButton"
+          android:src="@drawable/wineglass"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+      <ImageButton
+          android:id="@+id/SodaButton"
+          android:src="@drawable/soda"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:padding="10dp"
+          android:scaleType="fitCenter" />
+    </TableRow>
+  </TableLayout>
+  <ProgressBar
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_below="@id/AlkoTable"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:id="@+id/AlkoProgressBar1" />
+</RelativeLayout>-->

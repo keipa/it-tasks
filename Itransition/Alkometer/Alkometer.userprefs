@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="Alkometer.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="E:\Itransition\Alkometer\Resources\layout\Alko.axml" line="13" column="1" />
+      <Breakpoint file="E:\Itransition\Alkometer\Resources\layout\Alko.axml" line="40" column="1" />
+      <Breakpoint file="E:\Itransition\Alkometer\Resources\layout\Alko.axml" line="62" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Alkometer AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Drinks\DrinkItemListAdapter.cs">
+    <Files>
+      <File FileName="Drinks\DrinkItemListAdapter.cs" Line="63" Column="18" />
+      <File FileName="TabFragments.cs" Line="150" Column="32" />
+      <File FileName="MainScreen.cs" Line="35" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

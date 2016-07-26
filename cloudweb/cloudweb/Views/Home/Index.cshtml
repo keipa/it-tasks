@@ -3,11 +3,11 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    
-    
+    <h1>Photoshop Online</h1>
+    <p class="lead">Веб-приложение для просмотра и обработки фотографий</p>
+    <p><a href="http://localhost:54010/Account/Login" class="btn btn-primary btn-lg">Войти &raquo;</a></p>
+
+
 
 
 </div>
@@ -16,27 +16,23 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Загрузите фотографии</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Загрузите ваши фотографии на облако для доступа из любой точки
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Измените</h2>
+        <p>Воспользуйтесь редактором Fabric для изменения выших фото</p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Слайдшоу</h2>
+        <p>Используйте просмотр фотографий с помощью слайдшоу</p>
     </div>
 </div>
 
-@*<script>    //File Upload response from the server
+<script>
+    //File Upload response from the server
     Dropzone.options.dropzoneForm = {
         init: function () {
             this.on("complete", function (data) {
@@ -44,50 +40,5 @@
                 var res = JSON.parse(data.xhr.responseText);
             });
         }
-    };</script>*@
-
-
-@*@section scripts{*@
-
-    <script>
-
-        //File Upload response from the server
-        Dropzone.options.dropzoneForm = {
-            maxFiles: 2,
-            init: function () {
-                this.on("maxfilesexceeded", function (data) {
-                    var res = eval('(' + data.xhr.responseText + ')');
-
-                });
-                this.on("addedfile", function (file) {
-
-                    // Create the remove button
-                    var removeButton = Dropzone.createElement("<button>Remove file</button>");
-
-
-                    // Capture the Dropzone instance as closure.
-                    var _this = this;
-
-                    // Listen to the click event
-                    removeButton.addEventListener("click", function (e) {
-                        // Make sure the button click doesn't submit the form:
-                        e.preventDefault();
-                        e.stopPropagation();
-                        // Remove the file preview.
-                        _this.removeFile(file);
-                        // If you want to the delete the file on the server as well,
-                        // you can do the AJAX request here.
-                    });
-
-                    // Add the button to the file preview element.
-                    file.previewElement.appendChild(removeButton);
-                });
-            }
-        };
-
-
-
-
-
-
-    </script>
+    };
+</script>

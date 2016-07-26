@@ -1,0 +1,181 @@
+﻿@model cloudweb.Models.SlideShowViewModel
+
+@{
+    ViewBag.Title = "Создать Слайдшоу";
+}
+<style>
+    .controls {
+        display: inline-block;
+        background: #fafafa;
+        margin-left: 10px;
+        padding: 15px;
+        border-left: 1px dotted #aaa;
+    }
+
+    .selected {
+        box-shadow: 0px 12px 22px 1px #333;
+        opacity: 0.5;
+    }
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 150px;
+        border: dotted;
+        border-radius: 10px;
+    }
+
+        #sortable li {
+            margin: 10px 3px 10px 3px;
+            padding: 1px;
+            float: left;
+            width: 120px;
+            height: 120px;
+            text-align: center;
+        }
+</style>
+@if (ViewBag.State != null)
+{
+    <h2>ChangeSlideShow</h2>
+}
+else
+{
+    <h2>CreateSlideShow</h2>
+}
+@using (Html.BeginForm("CreateSlideShow", "Home", FormMethod.Post, new { id = "createForm" }))
+{
+    if (ViewBag.State != null)
+    {
+        <input type="hidden" id="inputData" name="inputData" value="@ViewBag.Paths" />
+    }
+    else
+    {
+        <input type="hidden" id="inputData" name="inputData" />
+    }
+    <div class="controls">
+        <label>Название:</label>
+        @if (ViewBag.State != null)
+        {
+            @Html.TextBoxFor(x => x.Name, new { @value = Model.Name })
+        }
+        else
+        {
+            @Html.TextBoxFor(x => x.Name)
+        }
+        <label>Эффекты:</label>
+        @if (ViewBag.State != null)
+        {
+            @Html.DropDownListFor(x => x.Effect, new List<SelectListItem>()
+   {
+       new SelectListItem() {Selected = "fade" == Model.Effect, Text = "Прозрачность", Value = "fade" },
+       new SelectListItem() {Selected = "horizontal" == Model.Effect, Text = "Горизонтальный переход", Value = "horizontal" },
+       new SelectListItem() {Selected = "vertical" == Model.Effect, Text = "Вертикальный переход", Value = "vertical" },
+   })
+        }
+        else
+        {
+            @Html.DropDownListFor(x => x.Effect, new List<SelectListItem>()
+   {
+       new SelectListItem() {Selected = true, Text = "Прозрачность", Value = "fade" },
+       new SelectListItem() {Selected = false, Text = "Горизонтальный переход", Value = "horizontal" },
+       new SelectListItem() {Selected = false, Text = "Вертикальный переход", Value = "vertical" },
+   })
+        }
+        <label>Длительность:</label>
+        @if (ViewBag.State != null)
+        {
+            @Html.TextBoxFor(x => x.Duration, new { @type = "number", @value = Model.Duration })
+        }
+        else
+        {
+            @Html.TextBoxFor(x => x.Duration, new { @type = "number" })
+        }
+        <input type="submit" value="Создать слайдшоу" class="btn btn-primary" />
+    </div>
+    <ul id="sortable">
+        @if (ViewBag.State != null)
+        {
+            foreach (var item in Model.several_photos)
+            {
+                <li class="ui-state-default"><img src="http://res.cloudinary.com/@item.path" class="picture" style="width:120px; height:120px" /></li>
+            }
+        }
+    </ul>
+    <div style="width: 100%;">
+        @if (Model.photos.Count() > 0)
+        {
+            <table style="width:100%; border-collapse: separate; border-spacing: 5px;">
+
+                @for (int i = 0; i < Model.photos.Count(); i += 4)
+                {
+                    <tr>
+                        @for (int j = i; (j < i + 4) && (j < Model.photos.Count()); j++)
+                        {
+                            <td>
+                                <div>
+                                    @if (ViewBag.State != null)
+                                    {
+                                        if (Model.several_photos.Contains(Model.photos[j]))
+                                        {
+                                            <img class="selected" style="width:220px; height:220px" src="http://res.cloudinary.com/@Model.photos[j].path" />
+                                        }
+                                        else
+                                        {
+                                            <img style="width:220px; height:220px" src="http://res.cloudinary.com/@Model.photos[j].path" />
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <img style="width:220px; height:220px" src="http://res.cloudinary.com/@Model.photos[j].path" />
+                                    }
+                                </div>
+                            </td>
+                        }
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <h3>У этого пользователя еще нет фотографий.</h3>
+        }
+    </div>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $('img').click(function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                $(this).addClass('selected');
+            }
+            document.getElementById('sortable').innerHTML = '';
+            var elems = document.getElementsByClassName('selected');
+            for (i = 0; i < elems.length; i++) {
+                document.getElementById('sortable').innerHTML += "<li class=\"ui-state-default\"><img src=\"" + elems[i].src + "\" class=\"picture\" style=\"width:120px; height:120px\"/></li>";
+            }
+            document.getElementById('inputData').value = '';
+            var elems2 = document.getElementsByClassName('picture');
+            for (i = 0; i < elems2.length; i++) {
+                document.getElementById('inputData').value += "#" + elems2[i].src;
+            }
+
+        });
+    </script>
+    <script type="text/javascript">
+    $( function() {
+        $('#sortable').sortable().bind('sortupdate', function () {
+            document.getElementById('inputData').value = '';
+            var elems2 = document.getElementsByClassName('picture');
+            for (i = 0; i < elems2.length; i++) {
+                document.getElementById('inputData').value += "#" + elems2[i].src;
+            }
+        });
+        $( "#sortable" ).disableSelection();
+    } );
+    </script>
+}

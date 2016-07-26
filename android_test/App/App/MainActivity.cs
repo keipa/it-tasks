@@ -20,9 +20,9 @@ namespace App
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-            Addtab("Camera", new Camera());
-            Addtab("Places", new PlaceItem());
-            Addtab("Meter", new MeterSpirt());
+            Addtab("Камера", new Camera());
+            Addtab("Сохранёнки", new PlaceItem());
+            Addtab("алкометр", new MeterSpirt());
 
             Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
            

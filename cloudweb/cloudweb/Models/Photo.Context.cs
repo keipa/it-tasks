@@ -25,6 +25,7 @@ namespace cloudweb.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<SlideShow> SlideShows { get; set; }
         public virtual DbSet<Table> Tables { get; set; }
     }
 }

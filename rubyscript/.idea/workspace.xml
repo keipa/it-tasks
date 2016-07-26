@@ -14,7 +14,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/rubyscript@hello.coverage" NAME="hello Coverage Results" MODIFIED="1468520893996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubyscript" />
+    <SUITE FILE_PATH="coverage/rubyscript@hello.coverage" NAME="hello Coverage Results" MODIFIED="1468534165735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubyscript" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -28,8 +28,28 @@
       <file leaf-file-name="hello.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hello.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="152">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phone_number_au.rb" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/ffaker-2.2.0/lib/ffaker/phone_number_au.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="address_ru.rb" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/ffaker-2.2.0/lib/ffaker/address_ru.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="593">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -47,6 +67,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/ffaker-2.2.0/lib/ffaker/phone_number_au.rb" />
         <option value="$PROJECT_DIR$/hello.rb" />
       </list>
     </option>
@@ -62,6 +83,40 @@
     <option name="y" value="32" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Gems</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Ruby</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Action Cable</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -114,9 +169,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSLint" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="sett&#9;ACTION&#9;ShowSettings" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/UserGenerator-master/UserGenerator-master/task1" />
   </component>
   <component name="RunManager" selected="Ruby.hello">
     <configuration default="false" name="hello" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
@@ -260,6 +316,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\keipa\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9ca19e5f-4629-4659-86b7-23826cba50eb" name="Default" comment="" />
@@ -268,12 +327,12 @@
       <option name="presentableId" value="Default" />
       <updated>1468438577831</updated>
       <workItem from="1468438585241" duration="1304000" />
-      <workItem from="1468491298975" duration="11843000" />
+      <workItem from="1468491298975" duration="19430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13147000" />
+    <option name="totallyTimeSpent" value="20734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
@@ -284,7 +343,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32828283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32828283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -297,6 +356,14 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -314,10 +381,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/ffaker-2.2.0/lib/ffaker/data/address_ru/street">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/ffaker-2.2.0/lib/ffaker/phone_number_au.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs23/array.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6198">
+          <caret line="317" column="35" selection-start-line="317" selection-start-column="35" selection-end-line="317" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/ffaker-2.2.0/lib/ffaker/address_ru.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hello.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="152">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
           <folding />
         </state>
       </provider>

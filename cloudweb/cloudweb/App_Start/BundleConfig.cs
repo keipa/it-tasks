@@ -14,6 +14,13 @@ namespace cloudweb
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+
+            //$("#sortable").sortable();
+            bundles.Add(new ScriptBundle("~/bundles/jquery-ui").Include(
+        "~/Scripts/jquery-ui-1.11.4.js",
+        "~/Scripts/jquery-ui-1.11.4.min.js"));
+
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -27,13 +34,22 @@ namespace cloudweb
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
+            bundles.Add(new StyleBundle("~/Content/slider").Include(
+          "~/Scripts/slider/jquery.bxslider.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/slider").Include(
+            "~/Scripts/slider/plugins/jquery.easing.1.3.js",
+            "~/Scripts/slider/jquery.bxslider.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/dropzonescripts").Include(
                      "~/Scripts/dropzone/dropzone.js"));
 
-            //bundles.Add(new StyleBundle("~/Content/dropzonescss").Include(
-            //         "~/Scripts/dropzone/css/basic.css",
-            //         "~/Scripts/dropzone/css/dropzone.css"));
+            bundles.Add(new ScriptBundle("~/bundles/fabricjs").Include(
+"~/Scripts/fabric.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/dropzonescss").Include(
+                     "~/Scripts/dropzone/basic.css",
+                     "~/Scripts/dropzone/dropzone.css"));
 
         }
     }

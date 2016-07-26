@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/DrinkButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:id="@+id/DrinkNewButtonLayout"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/DrinkAcceptSaveButton"
+                android:src="@drawable/ic_check_white_36dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="?android:selectableItemBackground" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/DrinkAcceptCancelButton"
+            android:src="@drawable/ic_arrow_back_white_36dp"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+    <TableLayout
+        android:id="@+id/AlkoTable"
+        android:paddingTop="30dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/DrinkButtonLayout"
+        android:layout_width="match_parent">
+        <TableRow
+            android:gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/BeerButton"
+                android:src="@drawable/beerglass"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/BeerBottleButton"
+                android:src="@drawable/beerbottle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/ShampoonGlassButton"
+                android:src="@drawable/shampoonglass"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/WineGlassButton"
+                android:src="@drawable/wineglass"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+        </TableRow>
+        <TableRow
+            android:gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/BeerKekButton"
+                android:src="@drawable/beerkek"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/BloodButton"
+                android:src="@drawable/bloodmary"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/DrinkButton"
+                android:src="@drawable/drink"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/FruitButton"
+                android:src="@drawable/fruit"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+        </TableRow>
+        <TableRow
+            android:gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/GlassButton"
+                android:src="@drawable/glass"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/KonjakButton"
+                android:src="@drawable/konjakglass"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/PintButton"
+                android:src="@drawable/pint"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/ShampoonBottleButton"
+                android:src="@drawable/shampoonbottle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+        </TableRow>
+    </TableLayout>
+    <RelativeLayout
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/AlkoTable">
+        <TextView
+            android:id="@+id/LabelAlcoholByVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alcohol by volume: "
+            android:textStyle="bold"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/TextAlcoholByVolume"
+            android:layout_width="382.0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_below="@+id/LabelAlcoholByVolume" />
+        <SeekBar
+            android:id="@+id/SeekBarAlcoholByVolume"
+            android:layout_height="47.0dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/TextAlcoholByVolume" />
+        <TextView
+            android:id="@+id/LabelVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volume: "
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/SeekBarAlcoholByVolume" />
+        <TextView
+            android:id="@+id/TextVolume"
+            android:layout_width="383.0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_below="@+id/LabelVolume" />
+        <SeekBar
+            android:id="@+id/SeekBarVolume"
+            android:layout_height="38.5dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/TextVolume" />
+    </RelativeLayout>
+</RelativeLayout>

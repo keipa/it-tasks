@@ -107,7 +107,7 @@
       <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/threading.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="15390">
               <caret line="861" column="0" selection-start-line="861" selection-start-column="0" selection-end-line="861" selection-end-column="0" />
               <folding />
             </state>
@@ -127,7 +127,7 @@
       <file leaf-file-name="banned.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/banned.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="126">
               <caret line="7" column="53" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="53" />
               <folding />
             </state>
@@ -200,6 +200,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,8 +286,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -605,27 +605,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51044387" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42558748" sideWeight="0.4975" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69712794" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49347258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="132" width="1416" height="676" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42558748" sideWeight="0.4975" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49347258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -719,6 +719,88 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15390">
+          <caret line="861" column="0" selection-start-line="861" selection-start-column="0" selection-end-line="861" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userlist/static/css/err.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/banned.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userlist/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2286">
+          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/django/core/handlers/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/django/contrib/staticfiles/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/wsgiref/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2394">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11178">
+          <caret line="624" column="0" selection-start-line="624" selection-start-column="0" selection-end-line="624" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -737,7 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,9 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,7 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,7 +998,7 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="15390">
           <caret line="861" column="0" selection-start-line="861" selection-start-column="0" selection-end-line="861" selection-end-column="0" />
           <folding />
         </state>
@@ -929,7 +1006,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/banned.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="126">
           <caret line="7" column="53" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="53" />
           <folding />
         </state>

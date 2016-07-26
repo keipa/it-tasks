@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ContactViewImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/ContactViewSaveButton"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_check_white_36dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/CancelViewDeleteButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back_white_36dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+        <TextView
+            android:id="@+id/ContactViewNameLabel"
+            android:text="Name:"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/ContactViewNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:layout_below="@+id/ContactViewNameLabel" />
+        <TextView
+            android:id="@+id/ContactViewNumberLabel"
+            android:text="Number:"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ContactViewNameText" />
+        <EditText
+            android:id="@+id/ContactViewNumberText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:layout_below="@+id/ContactViewNumberLabel" />
+    </RelativeLayout>
+</RelativeLayout>

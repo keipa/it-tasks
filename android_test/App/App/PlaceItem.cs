@@ -28,7 +28,7 @@ namespace App
             var view = inflater.Inflate(Resource.Layout.places, container, false);
             LinearLayout layout = (LinearLayout)view.FindViewById(Resource.Id.place);
             DirectoryInfo d = new DirectoryInfo(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath);
-            FileInfo[] f = d.GetFiles();
+            FileInfo[] f = d.GetFiles().OrderByDescending(x => x.Name).ToArray();
             foreach (var file in f)
             {
                 if (file.Name == ".png")

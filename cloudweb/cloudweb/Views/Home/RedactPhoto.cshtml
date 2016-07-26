@@ -1,0 +1,261 @@
+@{
+    ViewBag.Title = "RedactPhoto";
+}
+<h2>Редактирование фотографий</h2>
+
+
+<style type="text/css">
+    .controls {
+        display: inline-block;
+        background: #fafafa;
+        margin-left: 10px;
+        padding: 15px;
+        border-left: 1px dotted #aaa;
+    }
+
+    .canvas-container {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    input[disabled] {
+        opacity: 0.5;
+    }
+
+    /*#bd-wrapper {
+        min-width: 1600px;
+    }*/
+
+    .btn.btn-primary{
+        margin-bottom: 10px;
+
+    }
+</style>
+
+<script src="~/Scripts/fabric.js"></script>
+
+<div id="bd-wrapper">
+
+
+
+    @using (Html.BeginForm("Create", "Home", FormMethod.Post, new { id = "drawingForm", @style = "width:600px; height:600px; position: relative; float:left;" }))
+    {
+        <div class="canvas-container" style="width:600px; height:600px; position:relative; -webkit-user-select:none;  ">
+            <input type="hidden" name="imageData" id="imageData" />
+            <input class="btn btn-primary" type="button" id="btnSave" value="Сохранить фотографию" />
+            <canvas id="c" width="600" height="600" class="lower-canvas" style="position:absolute; width:600px;height:600px; left:0px;top: 0px; -webkit-user-select:none;border:dashed "></canvas>
+        </div>
+    }
+
+    @*@using (Html.BeginForm("DeletePhoto", "Home", FormMethod.Post, new {id = "deletephoto" }))
+    {
+        <input class="btn btn-danger" type="button" id="btnDelete" value="Удалить фотографию" />
+    }*@
+
+    <div class="controls">
+        <h3>Фильтры:</h3>
+        <p>
+            <label><span>Градации серого</span> <input type="checkbox" id="grayscale" disabled></label>
+        </p>
+        <p>
+            <label><span>Инверитровать цвета</span> <input type="checkbox" id="invert" disabled></label>
+        </p>
+        <p>
+            <label><span>Сепия</span> <input type="checkbox" id="sepia" disabled></label>
+        </p>
+        <p>
+            <label> <span>Светлая сепия</span><input type="checkbox" id="sepia2" disabled></label>
+        </p>
+
+        <p>
+            <label> <span>Яркость</span><input type="checkbox" id="brightness" disabled></label>
+
+            <input type="range" id="brightness-value" value="100" min="0" max="255" disabled>
+        </p>
+        <p>
+            <label><span>Шум:</span> <input type="checkbox" id="noise" disabled</label>
+            <label><input type="range" id="noise-value" value="100" min="0" max="1000" disabled></label>
+        </p>
+        <p>
+            <label><span>Убрать белые оттенки</span> <input type="checkbox" id="remove-white" disabled></label>
+            <br>
+            <label id="threshold">Глубина: <input type="range" id="remove-white-threshold" value="60" min="0" max="255" disabled></label>
+            <br>
+            <label id="distance">Интенсивность: <input type="range" id="remove-white-distance" value="10" min="0" max="255" disabled></label>
+        </p>
+
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSave").click(function () {
+                var form = $("#drawingForm");
+                var image = document.getElementById("c").toDataURL("image/png");
+                image = image.replace('data:image/png;base64,', '');
+                $("#imageData").val(image);
+                form.submit();
+            });
+        });
+    </script>
+
+
+<script type="text/javascript">
+        $(function () {
+            $("#btnDelete").click(function () {
+                var form = $("deletephoto");
+                form.submit();
+            });
+        });
+</script>
+
+    <script type="text/javascript">
+        (function () {
+
+            fabric.Object.prototype.transparentCorners = false;
+            var $ = function (id) { return document.getElementById(id) };
+            $('brightness-value').style.opacity = 0;
+            $('remove-white-threshold').style.opacity = 0;
+            $('remove-white-distance').style.opacity = 0;
+            $('noise-value').style.opacity = 0;
+            $('threshold').style.opacity = 0;
+            $('distance').style.opacity = 0;
+
+
+
+            function applyFilter(index, filter) {
+                var obj = canvas.getActiveObject();
+                obj.filters[index] = filter;
+                obj.applyFilters(canvas.renderAll.bind(canvas));
+            }
+
+            function applyFilterValue(index, prop, value) {
+                var obj = canvas.getActiveObject();
+                if (obj.filters[index]) {
+                    obj.filters[index][prop] = value;
+                    obj.applyFilters(canvas.renderAll.bind(canvas));
+                }
+            }
+
+            fabric.Object.prototype.padding = 5;
+            fabric.Object.prototype.transparentCorners = false;
+
+            var canvas = this.__canvas = new fabric.Canvas('c'),
+                f = fabric.Image.filters;
+
+            ////fabric.Image.fromURL('../lib/bg.png', function (img) {
+            ////    canvas.backgroundImage = img;
+            ////    canvas.backgroundImage.width = 600;
+            ////    canvas.backgroundImage.height = 600;
+            ////});
+
+            canvas.on({
+                'object:selected': function () {
+                    fabric.util.toArray(document.getElementsByTagName('input'))
+                                        .forEach(function (el) { el.disabled = false; })
+
+                    var filters = ['grayscale', 'invert', 'remove-white', 'sepia', 'sepia2',
+                                    'brightness', 'noise'];
+
+                    for (var i = 0; i < filters.length; i++) {
+                        $(filters[i]).checked = canvas.getActiveObject().filters[i];
+                    }
+                },
+                'selection:cleared': function () {
+                    fabric.util.toArray(document.getElementsByTagName('input'))
+                                        .forEach(function (el) { el.disabled = true; })
+                }
+            });
+
+            fabric.Image.fromURL("http://res.cloudinary.com/" + "@Model.path", function (img) {
+
+                var oImg = img.set({ left: 50, top: 100 }).scale(0.9);
+
+                canvas.add(oImg).renderAll();
+                canvas.setActiveObject(oImg);
+
+            }, { crossOrigin: "Anonymous" });
+            $('btnSave').onclick = function () {
+                canvas.item(0)['hasControls'] = false;
+                canvas.item(0)['hasBorders'] = false;
+                canvas.renderAll();
+            };
+            $('grayscale').onclick = function () {
+                applyFilter(0, this.checked && new f.Grayscale());
+            };
+            $('invert').onclick = function () {
+                applyFilter(1, this.checked && new f.Invert());
+            };
+            $('remove-white').onclick = function () {
+
+                if (this.checked) {
+                    $('threshold').style.opacity = 1;
+                    $('distance').style.opacity = 1;
+                    $('remove-white-threshold').style.opacity = 1;
+                    $('remove-white-distance').style.opacity = 1;
+                }
+                else {
+                    $('threshold').style.opacity = 0;
+                    $('distance').style.opacity = 0;
+                    $('remove-white-distance').style.opacity = 0;
+                    $('remove-white-threshold').style.opacity = 0;
+                }
+
+                applyFilter(2, this.checked && new f.RemoveWhite({
+                    threshold: $('remove-white-threshold').value,
+                    distance: $('remove-white-distance').value
+                }));
+            };
+            $('remove-white-threshold').onchange = function () {
+                applyFilterValue(2, 'threshold', this.value);
+            };
+            $('remove-white-distance').onchange = function () {
+                applyFilterValue(2, 'distance', this.value);
+            };
+            $('sepia').onclick = function () {
+                applyFilter(3, this.checked && new f.Sepia());
+            };
+            $('sepia2').onclick = function () {
+                applyFilter(4, this.checked && new f.Sepia2());
+            };
+            $('brightness').onclick = function () {
+                if (this.checked) {
+                    $('brightness-value').style.opacity = 1;
+                }
+                else {
+                    $('brightness-value').style.opacity = 0;
+                }
+                applyFilter(5, this.checked && new f.Brightness({
+                    brightness: parseInt($('brightness-value').value, 10)
+                }));
+            };
+            $('brightness-value').onchange = function () {
+                applyFilterValue(5, 'brightness', parseInt(this.value, 10));
+            };
+            $('noise').onclick = function () {
+
+                if (this.checked) {
+                    $('noise-value').style.opacity = 1;
+                }
+                else {
+                    $('noise-value').style.opacity = 0;
+                }
+
+                applyFilter(6, this.checked && new f.Noise({
+                    noise: parseInt($('noise-value').value, 10)
+                }));
+            };
+            $('noise-value').onchange = function () {
+                applyFilterValue(6, 'noise', parseInt(this.value, 10));
+            };
+
+        })();
+    </script>
+
+
+
+
+
+}
+
+

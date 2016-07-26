@@ -40,10 +40,11 @@ D:\LABS\itransition-tasks\android_test\App\App\bin\Debug\App.dll
 D:\LABS\itransition-tasks\android_test\App\App\bin\Debug\App.pdb
 D:\LABS\itransition-tasks\android_test\App\App\bin\Debug\App.App.apk
 D:\LABS\itransition-tasks\android_test\App\App\bin\Debug\App.App-Signed.apk
-D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\App.csprojResolveAssemblyReference.cache
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\App.dll
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\App.pdb
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\bin\App.App.apk
+D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\layout\places.xml
+D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\layout\alco.xml
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\layout\main.xml
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\values\strings.xml
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\drawable\icon.png
@@ -73,7 +74,6 @@ D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.R
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\layout\places.xml
-D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\res\layout\alco.xml
+D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\App.csprojResolveAssemblyReference.cache
 D:\LABS\itransition-tasks\android_test\App\App\obj\Debug\App.dll.mdb
 D:\LABS\itransition-tasks\android_test\App\App\bin\Debug\App.dll.mdb

@@ -36,7 +36,7 @@ namespace App
                 var bitmap = _textureView.GetBitmap(500, 500);
                 var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
 
-                var filePath = System.IO.Path.Combine(sdCardPath, a.ToString() + ".png");
+                var filePath = System.IO.Path.Combine(sdCardPath, "Photo"+a.ToString() + ".png");
                 var stream = new FileStream(filePath, FileMode.Create);
                 bitmap.Compress(Bitmap.CompressFormat.Png, 75, stream);
                 stream.Close();
@@ -46,9 +46,12 @@ namespace App
                 builder.SetView(input);
                 builder.SetPositiveButton("ok", (senderalert, args) =>
                 {
+
+
+
                     bitmap = _textureView.GetBitmap(500, 500);
                     sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
-                    
+                    File.Delete(System.IO.Path.Combine(sdCardPath, "Photo" + a.ToString() + ".png"));
                     filePath = System.IO.Path.Combine(sdCardPath, input.Text+ ".png");
                     stream = new FileStream(filePath, FileMode.Create);
                     bitmap.Compress(Bitmap.CompressFormat.Png, 75, stream);

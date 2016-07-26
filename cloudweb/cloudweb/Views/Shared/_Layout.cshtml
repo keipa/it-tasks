@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity;
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,7 +7,11 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/Content/dropzonescss")
+    @Styles.Render("~/bundles/dropzonescss")
+    @Styles.Render("~/Content/slider")
+
+
+
 
 </head>
 <body>
@@ -18,13 +23,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Photoshop Online", "DragImages", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    
+                    <li>@Html.ActionLink("Создать слайдшоу", "CreateSlideShow", "Home")</li>
+                    <li>@Html.ActionLink("Мои слайдшоу", "ListSlideShow", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -33,14 +38,17 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery-ui")
     @Scripts.Render("~/bundles/dropzonescripts")
+    @Scripts.Render("~/bundles/fabricjs")
+    @Scripts.Render("~/bundles/slider")
+
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

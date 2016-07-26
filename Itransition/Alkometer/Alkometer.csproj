@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{65034C6A-8C04-4560-B97B-42F12996939A}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Alkometer</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AssemblyName>Alkometer</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationManifest>AlkoLayout.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Portable, Version=4.0.0.0, Culture=neutral, PublicKeyToken=59e704a76bc4613a, processorArchitecture=MSIL">
+      <HintPath>packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\MonoAndroid\System.Data.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Transactions.Portable, Version=4.0.0.0, Culture=neutral, PublicKeyToken=59e704a76bc4613a, processorArchitecture=MSIL">
+      <HintPath>packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\MonoAndroid\System.Transactions.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drinks\DrinksDatabaseADO.cs" />
+    <Compile Include="Drinks\DrinkItem.cs" />
+    <Compile Include="Drinks\DrinkItemListAdapter.cs" />
+    <Compile Include="Drinks\DrinkItemRepositoryADO.cs" />
+    <Compile Include="Drinks\DrinkManager.cs" />
+    <Compile Include="MainScreen.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabFragments.cs" />
+    <Compile Include="Contacts\ContactManager.cs" />
+    <Compile Include="Contacts\ContactDatabaseADO.cs" />
+    <Compile Include="Contacts\ContactItemRepositoryADO.cs" />
+    <Compile Include="Contacts\ContactItemListAdapter.cs" />
+    <Compile Include="Screens\NewContactTakePhotoScreen.cs" />
+    <Compile Include="Contacts\ContactItem.cs" />
+    <Compile Include="Screens\NewContactEditScreen.cs" />
+    <Compile Include="Screens\DataSend.cs" />
+    <Compile Include="Screens\NewDrinkScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="AlkoLayout.manifest" />
+    <AndroidResource Include="Resources\layout\NewAlcoDrink.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DrinksListFooter.axml" />
+    <AndroidResource Include="Resources\layout\NewDrinkAcceptAlert.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DrinkView.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\ic_tab_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\kek.png" />
+    <AndroidResource Include="Resources\drawable\ic_camera.png" />
+    <AndroidResource Include="Resources\drawable\ic_pie.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\contacts.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\contacts.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\contacts.png" />
+    <AndroidResource Include="Resources\layout\ContactsLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Alko.axml" />
+    <AndroidResource Include="Resources\layout\NewContactTakePhoto.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_back_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_back_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_back_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_back_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_back_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_back_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_back_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_back_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_back_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_white_36dp.png" />
+    <AndroidResource Include="Resources\layout\ContactView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\NewContactEdit.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\beerglass.png" />
+    <AndroidResource Include="Resources\drawable\pint.png" />
+    <AndroidResource Include="Resources\drawable\baconcocktail.png" />
+    <AndroidResource Include="Resources\drawable\beerbottle.png" />
+    <AndroidResource Include="Resources\drawable\beercan.png" />
+    <AndroidResource Include="Resources\drawable\beerkek.png" />
+    <AndroidResource Include="Resources\drawable\bloodmary.png" />
+    <AndroidResource Include="Resources\drawable\drink.png" />
+    <AndroidResource Include="Resources\drawable\fruit.png" />
+    <AndroidResource Include="Resources\drawable\glass.png" />
+    <AndroidResource Include="Resources\drawable\konjakglass.png" />
+    <AndroidResource Include="Resources\drawable\ripple.axml" />
+    <AndroidResource Include="Resources\drawable\shampoonbottle.png" />
+    <AndroidResource Include="Resources\drawable\shampoonglass.png" />
+    <AndroidResource Include="Resources\drawable\soda.png" />
+    <AndroidResource Include="Resources\drawable\winebottle.png" />
+    <AndroidResource Include="Resources\drawable\wineglass.png" />
+    <AndroidResource Include="Resources\values\theme.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup />
+  <Import Project="packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets" Condition="Exists('packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" />
+  <Target Name="EnsureMonoDataSqlitePortableImported" BeforeTargets="BeforeBuild" Condition="'$(MonoDataSqlitePortableImported)' == ''">
+    <Error Condition="!Exists('packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them." />
+    <Error Condition="Exists('packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build." />
+  </Target>
+</Project>

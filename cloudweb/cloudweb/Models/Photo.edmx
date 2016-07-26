@@ -5,15 +5,27 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SlideShow">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SlideName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PhotoIds" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Effect" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <EntityType Name="Table">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="path" Type="nvarchar(max)" />
-          <Property Name="userid" Type="nvarchar(max)" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="path" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="userid" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="SlideShow" EntityType="Self.SlideShow" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -21,15 +33,27 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SlideShow">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SlideName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PhotoIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Effect" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <EntityType Name="Table">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="userid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="userid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityContainer Name="PostEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SlideShows" EntityType="Self.SlideShow" />
           <EntitySet Name="Tables" EntityType="Self.Table" />
         </EntityContainer>
       </Schema>
@@ -38,6 +62,18 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="PostEntities">
+          <EntitySetMapping Name="SlideShows">
+            <EntityTypeMapping TypeName="Model.SlideShow">
+              <MappingFragment StoreEntitySet="SlideShow">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SlideName" ColumnName="SlideName" />
+                <ScalarProperty Name="PhotoIds" ColumnName="PhotoIds" />
+                <ScalarProperty Name="Effect" ColumnName="Effect" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Tables">
             <EntityTypeMapping TypeName="Model.Table">
               <MappingFragment StoreEntitySet="Table">
